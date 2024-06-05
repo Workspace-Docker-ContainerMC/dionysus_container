@@ -1,0 +1,13 @@
+name: workflow_02
+on: [repository_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Triggering Wokflow 2"
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build Docker image
+        run: docker build --tag docker.io/workspacedockermc/el9-java17-dionysus-1.12.2:latest .
+      - name: Push Docker image in dockerhub
+        run: docker login -u workspacedockermc -p ${{ secrets.DOCKER_TOKEN }} && docker push docker.io/workspacedockermc/el9-java17-dionysus-1.12.2:latest
