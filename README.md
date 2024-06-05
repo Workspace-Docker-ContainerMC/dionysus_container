@@ -62,3 +62,4 @@ docker build -t docker.io/$USER/el9-java17-dionysus-1.12.2:latest .
 - [Red Hat](https://github.com/RedHatOfficial)
 - [GraalVM](https://github.com/graalvm)
 - [Docker](https://docker.com)
+- [nopjmp](https://github.com/nopjmp)
