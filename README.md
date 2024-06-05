@@ -5,7 +5,7 @@ This container is based on [ubi9-minimal](https://hub.docker.com/r/redhat/ubi9-m
 The container is built specifically for use as a minecraft server. [This issues](https://github.com/graalvm/container/issues/73) has been fixed in it.
 This allows you to fully use it as a server container without errors related to some plugins.
 
-All builds take place automatically without human intervention.
+All builds take place automatically without human intervention. If the [main repository](https://github.com/nopjmp/Dionysus) is updated, the build process starts and you get the latest version.
 
 ### About configuration: ###
 
@@ -31,7 +31,7 @@ You can run container with the docker command:
 ```
 docker run --detach --name=main --interactive \
     --tty --restart=unless-stopped --env MEMORYSIZE=2G \
-    --cpus=2 --memory 5G --volume /home/$USER/server/main:/main:rw,Z \
+    --cpus=2 --memory 5G --volume /home/$USER/server/main:/server:rw,Z \
     docker.io/workspacedockermc/el9-java17-dionysus-1.12.2:latest
 ```
 
