@@ -35,7 +35,7 @@ docker run --detach --name=main --interactive \
     docker.io/workspacedockermc/el9-java17-dionysus-1.12.2:latest
 ```
 
-Or use [this](https://github.com/WolfAURman/minecraft_containers/tree/master/compose-files) docker-composes files:
+Or use [this](https://github.com/Workspace-Docker-ContainerMC/compose-files) docker-composes files:
 ```
 docker-compose -f <NAME_DOCKER_COMPOSE_FILES> up -d
 ```
